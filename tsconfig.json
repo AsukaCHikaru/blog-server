@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "CommonJS",
+    "lib": ["DOM", "ESNext"],
+    "strict": true,
+    "noImplicitAny": true
+  },
+  "exclude": ["node_modules"]
+}
