@@ -18,7 +18,7 @@ export type PostDetail = {
   path: string;
 };
 
-export type PostCategory = "GAMING" | "PROGRAMMING" | "OTHERS";
+export type PostCategory = "gaming" | "programming" | "others";
 
 export type GitHubIssueResponse = {
   url: string;

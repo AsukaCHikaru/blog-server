@@ -19,10 +19,10 @@ export const readPostMetaData = (postBody: string) => {
   const tags = tagsRaw ? tagsRaw[1].split(", ") : [];
 
   const categoryRaw = /category:\s(.+)\r/.exec(postBody);
-  let category: PostCategory = "OTHERS";
-  if (categoryRaw && categoryRaw[1] === "gaming") category = "GAMING";
-  if (categoryRaw && categoryRaw[1] === "programming") category = "PROGRAMMING";
-  if (categoryRaw && categoryRaw[1] === "others") category = "OTHERS";
+  let category: PostCategory = "others";
+  if (categoryRaw && categoryRaw[1] === "gaming") category = "gaming";
+  if (categoryRaw && categoryRaw[1] === "programming") category = "programming";
+  if (categoryRaw && categoryRaw[1] === "others") category = "others";
 
   return { author, publishDate, path, tags, category };
 };
