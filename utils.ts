@@ -1,3 +1,4 @@
+import { raw } from "express";
 import {
   GithubIssue,
   GitHubIssueResponse,
@@ -45,6 +46,7 @@ export const normalizePostSummariesData = (rawData: GitHubIssueResponse) => {
       path,
       tags: tags,
       category: category,
+      id: postData.number.toString(),
     };
     postSummaries.push(postSummary);
   });
@@ -65,6 +67,7 @@ export const normalizePostDetailData = (rawData: GithubIssue) => {
     path,
     tags: tags,
     category: category,
+    id: rawData.number.toString(),
   };
 
   return postSummary;

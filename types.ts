@@ -6,6 +6,7 @@ export type PostSummary = {
   category: PostCategory;
   tags: string[];
   path: string;
+  id: string;
 };
 
 export type PostDetail = {
