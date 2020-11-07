@@ -32,9 +32,12 @@ export const SetAPI = (app: Express.Application) => {
         axiosAuthHeader
       );
       const postDetail = normalizePostDetailData(post.data);
+
       const postBody: any = await axios.get(
-        `${POSTS_API_ENDPOINT}/${id}/comments`
+        `${POSTS_API_ENDPOINT}/${id}/comments`,
+        axiosAuthHeader
       );
+
       postDetail.body = postBody.data[0].body;
       res.send(postDetail);
     }
