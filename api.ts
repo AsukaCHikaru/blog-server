@@ -1,9 +1,8 @@
 import * as Express from "express";
 import axios, { AxiosRequestConfig } from "axios";
 
-import { POSTS_API_ENDPOINT } from "./env";
+import { POSTS_API_ENDPOINT, GITHUB_TOKEN } from "./env";
 import { normalizePostDetailData, normalizePostSummariesData } from "./utils";
-import { GITHUB_TOKEN } from "./secret";
 
 const axiosAuthHeader: AxiosRequestConfig = {
   headers: {
